@@ -24,7 +24,7 @@ ls -al
 
 echo "looping thru all files with extention .nc"		
 for i in `find . -name "*.nc" -type f`; do
-    echo "I do something with the file $i"
+    echo "getting the date value from $i"
     year=$(echo $i | cut -d"_" -f3); echo $year
     dayofYear=$(echo $i | cut -d"_" -f4 | cut -d"." -f1); echo $dayofYear
     dateValue=$(date -d "$dayofYear days $year-01-01" +"%Y-%m-%d")
